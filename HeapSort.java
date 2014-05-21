@@ -1,3 +1,18 @@
+//Sisi Zimmerman, Ivette Chen, Julie Kim
+//APCS2 pd8
+//HW42
+//2014-05-22
+
+/*
+SUMMARY:
+
+1. Heapify the data (traverse the array and swap the child with its parent when needed)
+2. Remove the max, and put it at the end of the heapified region / beginnning of the sorted region  --> end result is in ascending order
+3. Sorted region grows, heapified region shrinks to 0
+4. Voila!
+
+*/
+
   public class HeapSort{
   
   
