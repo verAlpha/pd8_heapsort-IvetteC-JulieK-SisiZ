@@ -1,7 +1,7 @@
   public class HeapSort{
   
   
-      public static Integer[] sort(Integer[] data){
+      public static int[] sort(int[] data){
   
   	//adding as max heap
   	for(int i = 1; i < data.length; i++){
@@ -21,7 +21,7 @@
   		
   	//removing max
   	for (int i = data.length-1 ; i >= 0 ; i--){
-  	    Integer foo = data[i];
+  	    int foo = data[i];
   	    swap(data, i, 0);
   	    int pos = 0;
   	    int maxChildPos;
@@ -45,7 +45,7 @@
   
       }
   
-      public static int maxChildPos(Integer[] data,int pos, int length){
+      public static int maxChildPos(int[] data,int pos, int length){
   	int retVal;
   	int lc = 2*pos + 1; //index of left child
   	int rc = 2*pos + 2; //index of right child
@@ -64,13 +64,13 @@
   	return retVal;
       }
       
-      public static void swap(Integer[] data, int a, int b){
-  	Integer temp = data[a];
+      public static void swap(int[] data, int a, int b){
+  	int temp = data[a];
   	data[a] = data[b];
   	data[b] = temp;
       }
   
-      public static String stringify(Integer[] data){
+      public static String stringify(int[] data){
   	String s = "";
   	for( int i = 0; i < data.length; i++){
   	    s+= data[i] + ", ";
@@ -79,7 +79,7 @@
       }
       
       public static void main(String[] args){
-  	Integer[] data = {2,5,8,4,12,45,9,7,34,78,113,56};
+  	int[] data = {2,5,8,4,12,45,9,7,34,78,113,56};
   	System.out.println(stringify(sort(data)));
   
       }
